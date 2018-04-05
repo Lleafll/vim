@@ -22,6 +22,8 @@ set guifont=Consolas:h9
 colo evening
 set guioptions-=T
 set guioptions-=m
+set guioptions-=r
+set guioptions-=L
 set nu
 let &colorcolumn=81
 highlight ColorColumn ctermbg=0 guibg=gray17
