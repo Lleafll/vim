@@ -87,6 +87,8 @@ call plug#end()
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+let g:syntastic_cpp_checkers=["clang_check", "clang_tidy"]
+g:syntastic_c_clang_check_post_args=""
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_open=1
