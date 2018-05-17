@@ -18,7 +18,11 @@ set wildmenu
 
 "gui
 set anti enc=utf-8
-set guifont=Consolas:h9
+if has("win32")
+    set guifont=Consolas:h9
+elseif has("unix")
+    set guifont=Noto\ Mono\ 9
+endif
 colo evening
 set guioptions-=T
 set guioptions-=m
@@ -51,7 +55,7 @@ set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
 
 "keys
-command W w
+command! W w
 inoremap <C-Space> <C-n>
 set backspace=indent,start
 noremap <Up> <NOP>
@@ -70,7 +74,7 @@ let g:tex_conceal="abdgms"
 let g:tex_flavor="latex"
 
 "python
-command Pep8 execute "!autopep8 --in-place --aggressive --aggressive %"
+command! Pep8 execute "!autopep8 --in-place --aggressive --aggressive %"
 
 "netrw
 let g:netrw_altv=1
