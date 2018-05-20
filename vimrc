@@ -83,7 +83,12 @@ let g:netrw_liststyle=3
 let g:netrw_list_hide=netrw_gitignore#Hide()
 
 "make
-set makeprg=start\ cmake\ --build\ $*
+function! CMakeFunc(directory)
+    set makeprg=cmake\ --build\ $*
+    set errorformat=\ %#%f(%l):\ %#%t%[A-z]%#\ %[A-Z\ ]%#%n:\ %m
+    execute "make " . a:directory
+endfunction
+command! -nargs=1 CMake call CMakeFunc(<f-args>)
 
 "vim-plug options
 call plug#begin("~/vimfiles/plugged")
