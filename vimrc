@@ -88,7 +88,16 @@ function! CMakeFunc(directory)
     set errorformat=\ %#%f(%l):\ %#%t%[A-z]%#\ %[A-Z\ ]%#%n:\ %m
     execute "make " . a:directory
 endfunction
-command! -nargs=1 CMake call CMakeFunc(<f-args>)
+command! -nargs=1 -complete=dir CMake call CMakeFunc(<f-args>)
+
+"testing
+function! CTestFunc(directory)
+    call CMakeFunc(a:directory)
+    set makeprg=cd\ $*\ &&\ ctest\ -V
+    set errorformat=%.%#:\ %#%f(%l):\ %m
+    execute "make " . a:directory
+endfunction
+command! -nargs=1 -complete=dir CTest call CTestFunc(<f-args>)
 
 "vim-plug options
 call plug#begin("~/vimfiles/plugged")
