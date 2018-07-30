@@ -30,6 +30,7 @@ set guioptions-=r
 set guioptions-=L
 set nu
 let &colorcolumn=81
+highlight Cursor guibg=LightBlue guifg=Black
 highlight ColorColumn ctermbg=0 guibg=gray17
 highlight Pmenu guibg=Black gui=bold
 highlight VertSplit guibg=gray17 guifg=gray17
