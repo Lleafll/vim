@@ -121,5 +121,7 @@ let syntastic_quiet_messages = {
     \ "type": "style",
     \ "regex": '.*Could not execute LaTeX command\..*',
     \ "file": '.*\.tex$'}
+"Python
+let g:syntastic_python_checkers=["flake8"]
 
 
