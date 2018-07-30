@@ -33,8 +33,6 @@ let &colorcolumn=81
 highlight ColorColumn ctermbg=0 guibg=gray17
 highlight Pmenu guibg=Black gui=bold
 highlight VertSplit guibg=gray17 guifg=gray17
-highlight StatusLine guibg=fg guifg=gray17
-highlight StatusLineNC guibg=fg guifg=gray17
 highlight EndOfBuffer guibg=bg guifg=fg
 highlight SignColumn guibg=gray17
 set cursorline
@@ -42,17 +40,6 @@ set listchars=tab:>-,trail:·
 set list
 set number relativenumber
 set laststatus=2
-set statusline=%t       "tail of the filename
-set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
-set statusline+=%{&ff}] "file format
-set statusline+=%h      "help file flag
-set statusline+=%m      "modified flag
-set statusline+=%r      "read only flag
-set statusline+=%y      "filetype
-set statusline+=%=      "left/right separator
-set statusline+=%c,     "cursor column
-set statusline+=%l/%L   "cursor line/total lines
-set statusline+=\ %P    "percent through file
 
 "keys
 command! W w
@@ -102,6 +89,8 @@ command! -nargs=1 -complete=dir CTest call CTestFunc(<f-args>)
 "vim-plug options
 call plug#begin("~/vimfiles/plugged")
 Plug 'vim-syntastic/syntastic'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 "Syntastic options
@@ -124,4 +113,6 @@ let syntastic_quiet_messages = {
 "Python
 let g:syntastic_python_checkers=["flake8"]
 
+"vim-airline-themes options
+AirlineTheme bubblegum
 
