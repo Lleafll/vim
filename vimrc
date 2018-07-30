@@ -33,6 +33,7 @@ let &colorcolumn=81
 highlight ColorColumn ctermbg=0 guibg=gray17
 highlight Pmenu guibg=Black gui=bold
 highlight VertSplit guibg=gray17 guifg=gray17
+highlight StatusLine guibg=fg guifg=gray17
 highlight EndOfBuffer guibg=bg guifg=fg
 highlight SignColumn guibg=gray17
 set cursorline
