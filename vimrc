@@ -116,5 +116,5 @@ let syntastic_quiet_messages = {
 let g:syntastic_python_checkers=["flake8"]
 
 "vim-airline-themes options
-let g:airline_theme='bubblegum'
+let g:airline_theme='angr'
 
