@@ -57,9 +57,6 @@ inoremap <Left> <NOP>
 inoremap <Right> <NOP>
 
 "latex
-set conceallevel=2
-set concealcursor=nc
-let g:tex_conceal="abdgms"
 let g:tex_flavor="latex"
 
 "python
