@@ -42,6 +42,8 @@ set listchars=tab:>-,trail:·
 set list
 set number relativenumber
 set laststatus=2
+"window title
+auto BufEnter * let &titlestring = fnamemodify(getcwd(), ":t")
 
 "keys
 command! W w
