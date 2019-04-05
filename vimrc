@@ -62,7 +62,7 @@ inoremap <Right> <NOP>
 let g:tex_flavor="latex"
 
 "python
-command! MyPy execute "!mypy %"
+command! MyPy execute "!mypy --ignore-missing-imports %"
 command! Pep8 execute "!autopep8 --in-place --aggressive --aggressive %"
 
 "netrw
