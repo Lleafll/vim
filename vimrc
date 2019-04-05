@@ -113,7 +113,8 @@ let syntastic_quiet_messages = {
     \ "regex": '.*Could not execute LaTeX command\..*',
     \ "file": '.*\.tex$'}
 "Python
-let g:syntastic_python_checkers=["flake8"]
+let g:syntastic_python_checkers=["flake8", "mypy"]
+let g:syntastic_python_mypy_args="--ignore-missing-imports --follow-imports=silent --disallow-untyped-defs --disallow-incomplete-defs"
 
 "vim-airline-themes options
 let g:airline_theme='angr'
