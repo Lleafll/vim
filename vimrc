@@ -1,6 +1,8 @@
 set nocompatible
 syntax on
 filetype indent plugin on
+language messages English_United States
+set langmenu=en_US.UTF-8  
 
 "whitespace
 set autoindent
