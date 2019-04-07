@@ -53,9 +53,10 @@ set laststatus=2
 auto BufEnter * let &titlestring = fnamemodify(getcwd(), ":t")
 
 "keys
-command! W w
-inoremap <C-Space> <C-n>
 set backspace=indent,start
+command! W w
+nnoremap <F2> <C-]>
+inoremap <C-Space> <C-n>
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
