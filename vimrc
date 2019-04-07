@@ -16,6 +16,7 @@ set textwidth=80
 "convenience
 set autoread
 set path+=**
+set wildignore+=.*,*/virtualenv/*,*/__pycache__/*
 set wildmenu
 
 "complete/ctags
