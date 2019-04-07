@@ -18,6 +18,8 @@ set autoread
 set path+=**
 set wildmenu
 
+"complete/ctags
+set complete-=i
 "gui
 set anti enc=utf-8
 if has("win32")
