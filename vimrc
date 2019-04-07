@@ -95,6 +95,7 @@ call plug#begin("~/vimfiles/plugged")
 Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'ludovicchabant/vim-gutentags'
 call plug#end()
 
 "Syntastic options
