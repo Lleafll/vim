@@ -21,6 +21,8 @@ set wildmenu
 
 "complete/ctags
 set complete-=i
+command! Ctags execute "!ctags --recurse --languages=Python --exclude=.git --exclude=.mypy_cache --exclude=virtualenv"
+
 "gui
 set anti enc=utf-8
 if has("win32")
