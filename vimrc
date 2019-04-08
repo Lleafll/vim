@@ -125,3 +125,6 @@ let g:syntastic_python_mypy_args="--ignore-missing-imports --follow-imports=sile
 "vim-airline-themes options
 let g:airline_theme='angr'
 
+"gutentags
+let g:gutentags_generate_on_new = 0  " gutentags overwrites tags file otherwise
+
