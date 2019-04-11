@@ -41,10 +41,12 @@ highlight Cursor guibg=LightBlue guifg=Black
 highlight ColorColumn ctermbg=0 guibg=gray17
 highlight Pmenu guibg=Black gui=bold
 highlight VertSplit guibg='#444444' guifg='#444444'
-highlight StatusLine guibg='#444444' guifg='#444444'
+highlight StatusLine guibg=fg guifg='#444444'
 highlight StatusLineNC guibg='#444444' guifg='#444444'
 highlight EndOfBuffer guibg=gray17 guifg=gray17
-highlight SignColumn guibg=gray17
+highlight LineNr guibg='#444444'
+highlight CursorLineNr guibg='#444444'
+highlight SignColumn guibg='#444444'
 set cursorline
 set listchars=tab:>-,trail:·
 set list
