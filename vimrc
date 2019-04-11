@@ -36,7 +36,7 @@ set guioptions-=m
 set guioptions-=r
 set guioptions-=L
 set nu
-let &colorcolumn=81
+let &colorcolumn=join(range(81,999),",")
 highlight Cursor guibg=LightBlue guifg=Black
 highlight ColorColumn ctermbg=0 guibg=gray17
 highlight Pmenu guibg=Black gui=bold
