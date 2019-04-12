@@ -102,33 +102,21 @@ command! -nargs=1 -complete=dir CTest call CTestFunc(<f-args>)
 
 "vim-plug options
 call plug#begin("~/vimfiles/plugged")
-Plug 'vim-syntastic/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'w0rp/ale'
 call plug#end()
-
-"Syntastic options
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0
-"C++
-let g:syntastic_cpp_checkers=["clang_check"]
-let g:syntastic_cpp_clang_check_post_args=""
-"latex
-let syntastic_quiet_messages = {
-    \ "level": "warnings",
-    \ "type": "style",
-    \ "regex": '.*Could not execute LaTeX command\..*',
-    \ "file": '.*\.tex$'}
-"Python
-let g:syntastic_python_checkers=["flake8", "mypy"]
-let g:syntastic_python_mypy_args="--ignore-missing-imports --follow-imports=silent --disallow-untyped-defs --disallow-incomplete-defs"
 
 "vim-airline-themes options
 let g:airline_theme='angr'
+let g:airline#extensions#ale#enabled = 1
 
 "gutentags
 let g:gutentags_generate_on_new = 0  " gutentags overwrites tags file otherwise
 
+"ale options
+let g:ale_open_list = 1
+let g:ale_echo_msg_format = "%linter%: %s"
+let g:ale_linters = {"python": ["mypy", "flake8"]}
+let g:ale_python_mypy_options = "--ignore-missing-imports --disallow-untyped-defs --disallow-incomplete-defs"
