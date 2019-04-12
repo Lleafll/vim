@@ -52,6 +52,7 @@ set listchars=tab:>-,trail:·
 set list
 set number relativenumber
 set laststatus=2
+set signcolumn=yes
 "window title
 auto BufEnter * let &titlestring = fnamemodify(getcwd(), ":t")
 
