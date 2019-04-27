@@ -13,6 +13,11 @@ set shiftround
 set expandtab
 set textwidth=80
 
+"Disable automatic line breaks
+set nowrap
+set wrapmargin=0
+set formatoptions-=t
+
 "convenience
 set autoread
 set path+=**
