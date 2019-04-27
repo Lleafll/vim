@@ -106,6 +106,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'w0rp/ale'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 "vim-airline-themes options
