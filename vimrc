@@ -135,3 +135,4 @@ let g:tagbar_left = 1
 let g:tagbar_compact = 1
 let g:tagbar_sort = 0
 autocmd FileType * nested :call tagbar#autoopen(0)
+nnoremap <c-h> :TagbarOpen fj<CR>
