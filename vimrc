@@ -20,7 +20,7 @@ set formatoptions-=t  " Diable 'tearoff menu items'
 "convenience
 set autoread
 set path+=**
-set wildignore+=.*,*/virtualenv/*,*/__pycache__/*
+set wildignore+=.*,*/__pycache__/*,*/virtualenv/*,*/venv/*
 set wildmenu
 
 "complete/ctags
