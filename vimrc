@@ -106,10 +106,10 @@ command! -nargs=1 -complete=dir CTest call CTestFunc(<f-args>)
 call plug#begin("~/vimfiles/plugged")
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'w0rp/ale'
-Plug 'sheerun/vim-polyglot'
-Plug 'majutsushi/tagbar'
-Plug 'kien/ctrlp.vim'
+Plug 'w0rp/ale'  " Static syntax checker
+Plug 'sheerun/vim-polyglot'  " Improved syntax highlighting
+Plug 'majutsushi/tagbar'  " File outline bar
+Plug 'kien/ctrlp.vim'  " Improved file search
 Plug 'davidhalter/jedi-vim'  " Python language server (auto completion)
 call plug#end()
 
