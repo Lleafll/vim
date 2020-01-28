@@ -14,9 +14,8 @@ set expandtab
 set textwidth=80
 
 "Disable automatic line breaks
-set nowrap
-set wrapmargin=0
-set formatoptions-=t
+set wrapmargin=0  " Wrap lines immediately
+set formatoptions-=t  " Diable 'tearoff menu items'
 
 "convenience
 set autoread
