@@ -123,6 +123,9 @@ let g:ale_echo_msg_format = "%linter%: %s"
 let g:ale_linters = {"python": ["mypy", "flake8"]}
 let g:ale_python_mypy_options = "--ignore-missing-imports --disallow-untyped-defs --disallow-incomplete-defs"
 
+"CtrlP options
+let g:ctrlp_working_path_mode = 0  " Disable search path logic
+
 "jedi-vim options
 autocmd FileType python setlocal completeopt-=preview  " Disable docstring popup
 let g:jedi#goto_command = "<F2>"
