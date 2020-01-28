@@ -23,10 +23,6 @@ set path+=**
 set wildignore+=.*,*/__pycache__/*,*/virtualenv/*,*/venv/*
 set wildmenu
 
-"complete/ctags
-set complete-=i
-command! Ctags execute "!ctags --recurse --languages=Python --exclude=.git --exclude=.mypy_cache --exclude=virtualenv"
-
 "gui
 set anti enc=utf-8
 if has("win32")
@@ -63,7 +59,6 @@ auto BufEnter * let &titlestring = fnamemodify(getcwd(), ":t")
 "keys
 set backspace=indent,start
 command! W w
-nnoremap <F2> <C-]>
 inoremap <C-Space> <C-n>
 noremap <Up> <NOP>
 noremap <Down> <NOP>
@@ -73,6 +68,9 @@ inoremap <Up> <NOP>
 inoremap <Down> <NOP>
 inoremap <Left> <NOP>
 inoremap <Right> <NOP>
+" Move up and down in autocomplete with <c-j> and <c-k>
+inoremap <expr> <c-j> ("\<C-n>")
+inoremap <expr> <c-k> ("\<C-p>")
 
 "latex
 let g:tex_flavor="latex"
@@ -108,22 +106,29 @@ command! -nargs=1 -complete=dir CTest call CTestFunc(<f-args>)
 call plug#begin("~/vimfiles/plugged")
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'w0rp/ale'
 Plug 'sheerun/vim-polyglot'
 Plug 'majutsushi/tagbar'
 Plug 'kien/ctrlp.vim'
+Plug 'davidhalter/jedi-vim'  " Python language server (auto completion)
 call plug#end()
 
 "vim-airline-themes options
 let g:airline_theme='angr'
 let g:airline#extensions#ale#enabled = 1
 
-"gutentags
-let g:gutentags_generate_on_new = 0  " gutentags overwrites tags file otherwise
-
 "ale options
 let g:ale_open_list = 1
 let g:ale_echo_msg_format = "%linter%: %s"
 let g:ale_linters = {"python": ["mypy", "flake8"]}
 let g:ale_python_mypy_options = "--ignore-missing-imports --disallow-untyped-defs --disallow-incomplete-defs"
+
+"jedi-vim options
+autocmd FileType python setlocal completeopt-=preview  " Disable docstring popup
+let g:jedi#goto_command = "<F2>"
+
+"Tagbar options
+let g:tagbar_left = 1
+let g:tagbar_compact = 1
+let g:tagbar_sort = 0
+autocmd FileType * nested :call tagbar#autoopen(0)
