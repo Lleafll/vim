@@ -111,6 +111,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'w0rp/ale'
 Plug 'sheerun/vim-polyglot'
+Plug 'majutsushi/tagbar'
+Plug 'kien/ctrlp.vim'
 call plug#end()
 
 "vim-airline-themes options
