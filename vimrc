@@ -23,39 +23,6 @@ set path+=**
 set wildignore+=.*,*/__pycache__/*,*/virtualenv/*,*/venv/*
 set wildmenu
 
-"gui
-set anti enc=utf-8
-if has("win32")
-    set guifont=Consolas:h9
-elseif has("unix")
-    set guifont=Noto\ Mono\ 9
-endif
-colo evening
-set guioptions-=T
-set guioptions-=m
-set guioptions-=r
-set guioptions-=L
-set nu
-let &colorcolumn=join(range(81,999),",")
-highlight Cursor guibg=LightBlue guifg=Black
-highlight ColorColumn ctermbg=0 guibg=gray17
-highlight Pmenu guibg=Black gui=bold
-highlight VertSplit guifg='#444444' guibg=gray17
-highlight StatusLine guibg=fg guifg='#444444'
-highlight StatusLineNC guibg='#444444' guifg='#444444'
-highlight EndOfBuffer guibg=gray17 guifg=gray17
-highlight LineNr guibg='#444444'
-highlight CursorLineNr guibg='#444444'
-highlight SignColumn guibg='#444444'
-set cursorline
-set listchars=tab:>-,trail:·
-set list
-set number relativenumber
-set laststatus=2
-set signcolumn=yes
-"window title
-auto BufEnter * let &titlestring = fnamemodify(getcwd(), ":t")
-
 "keys
 set backspace=indent,start
 command! W w
@@ -146,3 +113,36 @@ let g:python_highlight_string_format = 1
 let g:python_highlight_string_formatting = 1
 let g:python_highlight_builtin_objs = 1
 let g:python_highlight_class_vars = 1
+
+"gui
+set anti enc=utf-8
+if has("win32")
+    set guifont=Consolas:h9
+elseif has("unix")
+    set guifont=Noto\ Mono\ 9
+endif
+set guioptions-=T
+set guioptions-=m
+set guioptions-=r
+set guioptions-=L
+set nu
+let &colorcolumn=join(range(81,999),",")
+colorscheme slate
+highlight Cursor guibg=LightBlue guifg=Black
+highlight ColorColumn ctermbg=0 guibg=gray17
+highlight Pmenu guibg=Black gui=bold
+highlight VertSplit guifg='#444444' guibg=gray17
+highlight StatusLine guibg=fg guifg='#444444'
+highlight StatusLineNC guibg='#444444' guifg='#444444'
+highlight EndOfBuffer guibg=gray17 guifg=gray17
+highlight LineNr guibg='#444444'
+highlight CursorLineNr guibg='#444444'
+highlight SignColumn guibg='#444444'
+set cursorline
+set listchars=tab:>-,trail:·
+set list
+set number relativenumber
+set laststatus=2
+set signcolumn=yes
+"window title
+auto BufEnter * let &titlestring = fnamemodify(getcwd(), ":t")
