@@ -76,6 +76,10 @@ inoremap <expr> <c-k> ("\<C-p>")
 let g:tex_flavor="latex"
 
 "python
+set pythonthreedll=python37.dll
+if has('python3')
+  silent! python3 1
+endif
 command! Yapf execute "!yapf --in-place %"
 command! Mypy execute "!mypy --namespace-packages %"
 command! Pep8 execute "!autopep8 --in-place --aggressive --aggressive %"
@@ -107,10 +111,10 @@ call plug#begin("~/vimfiles/plugged")
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'  " Static syntax checker
-Plug 'sheerun/vim-polyglot'  " Improved syntax highlighting
 Plug 'majutsushi/tagbar'  " File outline bar
 Plug 'kien/ctrlp.vim'  " Improved file search
 Plug 'davidhalter/jedi-vim'  " Python language server (auto completion)
+Plug 'vim-python/python-syntax'  " Python Syntax Highlighting
 call plug#end()
 
 "vim-airline-themes options
@@ -136,3 +140,9 @@ let g:tagbar_compact = 0
 let g:tagbar_sort = 0
 autocmd FileType * nested :call tagbar#autoopen(0)
 nnoremap <c-h> :TagbarOpen fj<CR>
+
+"python-syntax
+let g:python_highlight_string_format = 1
+let g:python_highlight_string_formatting = 1
+let g:python_highlight_builtin_objs = 1
+let g:python_highlight_class_vars = 1
