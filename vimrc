@@ -91,8 +91,9 @@ let g:airline#extensions#ale#enabled = 1
 "ale options
 let g:ale_open_list = 1
 let g:ale_echo_msg_format = "%linter%: %s"
-let g:ale_linters = {"python": ["mypy", "flake8"]}
+let g:ale_linters = {"python": ["mypy", "flake8", "pylint"]}
 let g:ale_python_mypy_options = "--ignore-missing-imports --disallow-untyped-defs --disallow-incomplete-defs"
+let g:ale_python_pylint_options = "--disable=missing-docstring"
 
 "CtrlP options
 let g:ctrlp_working_path_mode = 0  " Disable search path logic
