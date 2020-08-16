@@ -43,7 +43,7 @@ inoremap <expr> <c-k> ("\<C-p>")
 let g:tex_flavor="latex"
 
 "python
-set pythonthreedll=python37.dll
+set pythonthreedll=python38.dll
 if has('python3')
   silent! python3 1
 endif
