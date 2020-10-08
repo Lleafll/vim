@@ -93,7 +93,7 @@ let g:ale_open_list = 1
 let g:ale_echo_msg_format = "%linter%: %s"
 let g:ale_linters = {"python": ["mypy", "flake8", "pylint"]}
 let g:ale_python_mypy_options = "--ignore-missing-imports --disallow-untyped-defs --disallow-incomplete-defs"
-let g:ale_python_pylint_options = "--disable=missing-docstring"
+let g:ale_python_pylint_options = "--disable=missing-docstring --disable=too-few-public-methods --disable=c-extension-no-member --method-naming-style=any --disable=no-self-use"
 
 "CtrlP options
 let g:ctrlp_working_path_mode = 0  " Disable search path logic
